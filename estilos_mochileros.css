@@ -1,5 +1,6 @@
 body{
     font: 200 20px 'Poppins', sans-serif;
+    padding-left: 30px;
 }
 
 header{
@@ -8,12 +9,14 @@ header{
     gap: 20px;
     background-color: gray;
     border: 3px solid #000;
+    padding-left: 25px;
 }
 
 main{
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: gray;
+    padding-left: 25px;
 }
 
 /*Busco meter los bloques del main en un bloque común(div), para poder utilizar flex entre ese bloque
@@ -30,6 +33,7 @@ footer{
     gap: 200px;
     border: 2px solid #000;
     background-color: grey;
+    padding-left: 25px;
 }
 
 .registro{
@@ -42,6 +46,25 @@ footer{
     border-bottom: 2px solid black;
     padding-bottom: 10px;
     font-size: 15px;
+}
+
+#experiencias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*Para consegir 2 filas y 3 columnas*/
+    grid-template-rows: repeat(2, auto);
+}
+
+.galeria{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.opciones_galeria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
 #redes img{
