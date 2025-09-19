@@ -56,6 +56,7 @@ main{
     grid-template-columns: 2fr 1fr;
     background-color: gray;
     padding-left: 25px;
+    gap: 20px;
 }
 
 /*Busco meter los bloques del main en un bloque común(div), para poder utilizar flex entre ese bloque
@@ -133,6 +134,7 @@ footer {
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .opciones_galeria{
@@ -150,9 +152,31 @@ footer {
 /* Bloque Superior 1 */
 .bloque-superior-1 {
   border: 2px solid #000;
-  padding: 20px;
-  background-color: #fff;
+  height: 220px;        /* sube un poco la altura para que respire el texto */
+  text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
+  /**/
+  display: flex;
+  align-items: flex-start;
+  padding-top: 30px;
+  justify-content: center;
+  position: relative;
+}
+
+/* mejora el aspecto del h2 (fondo semitransparente, texto blanco, sin margen) */
+.bloque-superior-1 h2 {
+  margin: 0;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.25rem; /*1,25 * 20px = 25px*/
 }
 
 /* Bloque Superior 2 */
@@ -161,6 +185,7 @@ footer {
   padding: 20px;
   background-color: #fff;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 /* Bloque Experiencias */
@@ -168,6 +193,7 @@ footer {
   border: 2px solid #000;
   padding: 20px;
   background-color: #f9f9f9;
+  border-radius: 10px;
 }
 
 /* Grid de experiencias */
@@ -186,6 +212,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-radius: 10px;
 }
 
 /* h4 en caja */
