@@ -3,13 +3,52 @@ body{
     padding-left: 30px;
 }
 
-header{
-    display:flex;
+header {
+  display: flex;
+  align-items: center;        /* centra verticalmente los tres bloques */
+  justify-content: space-between; /* separa izquierda - centro - derecha */
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+}
+
+/* El bloque central ocupa el espacio del medio */
+.Enlaces_iniciales {
+  flex: 1;                 /* se expande para ocupar el espacio disponible */
+  text-align: center;      /* centra los enlaces dentro */
+}
+
+.Enlaces_iniciales a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Logo + idioma alineados a la derecha */
+.Idioma {
+    display: flex;
     align-items: center;
-    gap: 20px;
-    background-color: gray;
-    border: 3px solid #000;
-    padding-left: 25px;
+    gap: 10px; /* separación entre logo e idioma */
+}
+
+/* Creamos el reborde que tendra el selector del idioma */
+.Selector_idioma {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: default;
+}
+
+.Selector_idioma span {
+    margin: 0 2px;
+}
+
+.Selector_idioma .flecha {
+    font-size: 12px;
 }
 
 main{
@@ -27,13 +66,49 @@ aside{
     padding-left: 50px;
 }
 
-footer{
+footer {
     display: flex;
+    justify-content: space-between; /* separa los tres bloques */
     align-items: center;
-    gap: 200px;
+    position: relative; /* necesario para centrar el bloque central */
+    padding: 20px;            /* centra verticalmente */
+    padding: 20px;
+    background-color: #f0f0f0;
     border: 2px solid #000;
-    background-color: grey;
-    padding-left: 25px;
+}
+
+/* Bloque izquierdo */
+.Copyright {
+    text-align: left;
+}
+
+/* Bloque central centrado */
+.Sobre_nosotros {
+    position: absolute; /* lo sacamos del flujo del flex */
+    left: 50%;          /* mitad de la página */
+    transform: translateX(-50%); /* lo centramos exactamente */
+    text-align: center;
+}
+
+.Sobre_nosotros a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.Sobre_nosotros a:hover {
+    text-decoration: underline;
+}
+
+/* Bloque derecho */
+.redes_sociales {
+    text-align: right;
+}
+
+.redes_sociales img {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
 }
 
 .registro{
@@ -70,4 +145,53 @@ footer{
 #redes img{
     height: 40px;
     width: 40px;
+}
+
+/* Bloque Superior 1 */
+.bloque-superior-1 {
+  border: 2px solid #000;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Bloque Superior 2 */
+.bloque-superior-2 {
+  border: 2px solid #000;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Bloque Experiencias */
+.bloque-experiencias {
+  border: 2px solid #000;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Grid de experiencias */
+#experiencias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px; /* separación entre cajas */
+  margin-top: 20px;
+}
+
+/* Cada experiencia */
+#experiencias > div {
+  border: 2px solid #000;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* h4 en caja */
+#experiencias h4 {
+  margin: 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
 }
