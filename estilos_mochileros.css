@@ -14,26 +14,26 @@ header {
 }
 
 /* El bloque central ocupa el espacio del medio */
-.Enlaces_iniciales {
+.enlaces-iniciales {
   flex: 1;                 /* se expande para ocupar el espacio disponible */
   text-align: center;      /* centra los enlaces dentro */
 }
 
-.Enlaces_iniciales a {
+.enlaces-iniciales a {
   margin: 0 10px;
   text-decoration: none;
   color: #000;
 }
 
 /* Logo + idioma alineados a la derecha */
-.Idioma {
+.idioma {
     display: flex;
     align-items: center;
     gap: 10px; /* separación entre logo e idioma */
 }
 
 /* Creamos el reborde que tendra el selector del idioma */
-.Selector_idioma {
+.selector-idioma {
     display: flex;
     align-items: center;
     border: 1px solid #000;
@@ -44,11 +44,11 @@ header {
     cursor: default;
 }
 
-.Selector_idioma span {
+.selector-idioma span {
     margin: 0 2px;
 }
 
-.Selector_idioma .flecha {
+.selector-idioma .flecha {
     font-size: 12px;
 }
 
@@ -108,7 +108,7 @@ main{
   border-radius: 10px;
 }
 
-.flecha_pack{
+.flecha-pack{
   height: 25px;
   cursor: pointer;
 }
@@ -119,7 +119,7 @@ main{
   gap: 20px
 }
 
-.packs_contenido{
+.packs-contenido{
   background-image:url("/Imágenes/fiordos.jpg");
   background-size: cover;      /* el fondo ocupa todo el espacio */
   background-position: center; /* se centra la imagen */
@@ -135,14 +135,14 @@ main{
   padding: 10px;
 }
 
-.cabecera_packs{
+.cabecera-packs{
   display: flex;
   justify-content: space-between; /*Muy útil, pone un elemento a la izq y el otro a la dch*/
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.cabecera_packs h3{
+.cabecera-packs h3{
   background: rgba(0,0,0,0.45);
   color: white;
   padding: 8px 12px;
@@ -151,7 +151,7 @@ main{
   font-size: 1.25rem; /*1,25 * 20px = 25px*/
 }
 
-.packs_contenido p {
+.packs-contenido p {
   margin: 5px 0;
   margin-bottom: 150px;
   background: rgba(0,0,0,0.4); /* para que el texto se lea */
@@ -162,7 +162,7 @@ main{
   
 }
 
-.boton_comprar{
+.boton-comprar{
   align-self: flex-end;
   border-radius: 6px;
   cursor: pointer;
@@ -179,14 +179,14 @@ main{
     justify-content: center;
 }
 
-.opciones_galeria{
+.opciones-galeria{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
 }
 
-.opciones_galeria button{
+.opciones-galeria button{
   border-radius: 6px;
   cursor: pointer;
 }
@@ -205,6 +205,7 @@ main{
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 /* Grid de experiencias */
@@ -246,8 +247,9 @@ aside{
     border: 2px solid #000;
     border-radius: 10px;
     padding-left: 50px;
-    margin-top: 10px;
+    margin-top: 20px;
     background-color: #fff;
+    margin-bottom: 20px;
 }
 
 .registro{
@@ -255,10 +257,10 @@ aside{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-right: 50px;
     border-bottom: 2px solid black;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-size: 15px;
 }
 
@@ -280,34 +282,34 @@ footer {
 }
 
 /* Bloque izquierdo */
-.Copyright {
+.copyright {
     text-align: left;
 }
 
 /* Bloque central centrado */
-.Sobre_nosotros {
+.sobre-nosotros {
     position: absolute; /* lo sacamos del flujo del flex */
     left: 50%;          /* mitad de la página */
     transform: translateX(-50%); /* lo centramos exactamente */
     text-align: center;
 }
 
-.Sobre_nosotros a {
+.sobre-nosotros a {
     margin: 0 5px;
     text-decoration: none;
     color: #000;
 }
 
-.Sobre_nosotros a:hover {
+.sobre-nosotros a:hover {
     text-decoration: underline;
 }
 
 /* Bloque derecho */
-.redes_sociales {
+.redes-sociales {
     text-align: right;
 }
 
-.redes_sociales img {
+.redes-sociales img {
     margin-left: 10px;
 }
 
