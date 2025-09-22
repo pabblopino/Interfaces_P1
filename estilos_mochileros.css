@@ -64,6 +64,7 @@ principal y la barra lateral*/
 
 aside{
     border: 2px solid #000;
+    border-radius: 10px;
     padding-left: 50px;
 }
 
@@ -124,6 +125,10 @@ footer {
     font-size: 15px;
 }
 
+.botones button{
+  border-radius: 6px;
+}
+
 #experiencias{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /*Para consegir 2 filas y 3 columnas*/
@@ -144,15 +149,34 @@ footer {
     gap: 10px;
 }
 
+.opciones_galeria button{
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.corazon {
+  width: 25px;
+  height: 25px;
+  background-image: url("Imágenes/logo_corazon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+}
+
 #redes img{
     height: 40px;
     width: 40px;
 }
 
+.flecha{
+  height: 25px;
+  cursor: pointer;
+}
+
 /* Bloque Superior 1 */
 .bloque-superior-1 {
   border: 2px solid #000;
-  height: 220px;        /* sube un poco la altura para que respire el texto */
+  height: 220px;        
   text-align: center;
   background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
@@ -186,6 +210,60 @@ footer {
   background-color: #fff;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+#packs{
+  display: flex;
+  align-items: center; /*Poner bien!*/
+  gap: 20px
+}
+
+.packs_contenido{
+  background-image:url("/Imágenes/fiordos.jpg");
+  background-size: cover;      /* el fondo ocupa todo el espacio */
+  background-position: center; /* se centra la imagen */
+  background-repeat: no-repeat; /* se evita repetición de la imagen */
+  width: 800px;
+  height: 300px;
+  border: 2px solid #000;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.cabecera_packs{
+  display: flex;
+  justify-content: space-between; /*Muy útil, pone un elemento a la izq y el otro a la dch*/
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cabecera_packs h3{
+  background: rgba(0,0,0,0.45);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.25rem; /*1,25 * 20px = 25px*/
+}
+
+.packs_contenido p {
+  margin: 5px 0;
+  margin-bottom: 150px;
+  background: rgba(0,0,0,0.4); /* para que el texto se lea */
+  color: white;
+  border-radius: 10px;
+  padding: 4px 8px;
+  width: fit-content;
+  
+}
+
+.boton_comprar{
+  align-self: flex-end;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /* Bloque Experiencias */
