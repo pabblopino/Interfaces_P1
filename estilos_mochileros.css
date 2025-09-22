@@ -1,8 +1,9 @@
 body{
-    font: 200 20px 'Poppins', sans-serif;
+    font: 400 20px 'Poppins', sans-serif;
     padding-left: 30px;
 }
 
+/* CABECERA */
 header {
   display: flex;
   align-items: center;        /* centra verticalmente los tres bloques */
@@ -51,6 +52,9 @@ header {
     font-size: 12px;
 }
 
+/* FIN CABECERA */
+
+/* MAIN */
 main{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -59,121 +63,10 @@ main{
     gap: 20px;
 }
 
-/*Busco meter los bloques del main en un bloque común(div), para poder utilizar flex entre ese bloque
-principal y la barra lateral*/
+/* BLOQUE SUPERIOR */
 
-aside{
-    border: 2px solid #000;
-    border-radius: 10px;
-    padding-left: 50px;
-}
+/* BLOQUE SUPERIOR 1 -> Banner*/
 
-footer {
-    display: flex;
-    justify-content: space-between; /* separa los tres bloques */
-    align-items: center;
-    position: relative; /* necesario para centrar el bloque central */
-    padding: 20px;            /* centra verticalmente */
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 2px solid #000;
-}
-
-/* Bloque izquierdo */
-.Copyright {
-    text-align: left;
-}
-
-/* Bloque central centrado */
-.Sobre_nosotros {
-    position: absolute; /* lo sacamos del flujo del flex */
-    left: 50%;          /* mitad de la página */
-    transform: translateX(-50%); /* lo centramos exactamente */
-    text-align: center;
-}
-
-.Sobre_nosotros a {
-    margin: 0 5px;
-    text-decoration: none;
-    color: #000;
-}
-
-.Sobre_nosotros a:hover {
-    text-decoration: underline;
-}
-
-/* Bloque derecho */
-.redes_sociales {
-    text-align: right;
-}
-
-.redes_sociales img {
-    height: 40px;
-    width: 40px;
-    margin-left: 10px;
-}
-
-.registro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-    margin-right: 50px;
-    border-bottom: 2px solid black;
-    padding-bottom: 10px;
-    font-size: 15px;
-}
-
-.botones button{
-  border-radius: 6px;
-}
-
-#experiencias{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /*Para consegir 2 filas y 3 columnas*/
-    grid-template-rows: repeat(2, auto);
-}
-
-.galeria{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.opciones_galeria{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-}
-
-.opciones_galeria button{
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.corazon {
-  width: 25px;
-  height: 25px;
-  background-image: url("Imágenes/logo_corazon.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-}
-
-#redes img{
-    height: 40px;
-    width: 40px;
-}
-
-.flecha{
-  height: 25px;
-  cursor: pointer;
-}
-
-/* Bloque Superior 1 */
 .bloque-superior-1 {
   border: 2px solid #000;
   height: 220px;        
@@ -203,13 +96,21 @@ footer {
   font-size: 1.25rem; /*1,25 * 20px = 25px*/
 }
 
-/* Bloque Superior 2 */
+/* FIN BLOQUE SUPERIOR 1 */
+
+/* BLOQUE SUPERIOR 2 -> Packs*/
+
 .bloque-superior-2 {
   border: 2px solid #000;
   padding: 20px;
   background-color: #fff;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+.flecha_pack{
+  height: 25px;
+  cursor: pointer;
 }
 
 #packs{
@@ -223,7 +124,8 @@ footer {
   background-size: cover;      /* el fondo ocupa todo el espacio */
   background-position: center; /* se centra la imagen */
   background-repeat: no-repeat; /* se evita repetición de la imagen */
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: 300px;
   border: 2px solid #000;
   border-radius: 10px;
@@ -266,7 +168,38 @@ footer {
   cursor: pointer;
 }
 
-/* Bloque Experiencias */
+/* FIN BLOQUE SUPERIOR 2 */
+
+/* BLOQUE INFERIOR -> Galería de experiencias */
+
+.galeria{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.opciones_galeria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.opciones_galeria button{
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.corazon {
+  width: 25px;
+  height: 25px;
+  background-image: url("Imágenes/logo_corazon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+}
+
 .bloque-experiencias {
   border: 2px solid #000;
   padding: 20px;
@@ -300,3 +233,87 @@ footer {
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
 }
+
+/* FIN BLOQUE INFERIOR */
+
+/* FIN MAIN */
+
+/* BARRA LATERAL */
+/*Busco meter los bloques del main en un bloque común(div), para poder utilizar flex entre ese bloque
+principal y la barra lateral*/
+
+aside{
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding-left: 50px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-right: 50px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.botones button{
+  border-radius: 6px;
+}
+
+/* FIN BARRA LATERAL */
+
+/* PIE DE PÁGINA */
+footer {
+    display: flex;
+    justify-content: space-between; /* separa los tres bloques */
+    align-items: center;
+    position: relative; /* necesario para centrar el bloque central */
+    padding: 20px;            /* centra verticalmente */
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+}
+
+/* Bloque izquierdo */
+.Copyright {
+    text-align: left;
+}
+
+/* Bloque central centrado */
+.Sobre_nosotros {
+    position: absolute; /* lo sacamos del flujo del flex */
+    left: 50%;          /* mitad de la página */
+    transform: translateX(-50%); /* lo centramos exactamente */
+    text-align: center;
+}
+
+.Sobre_nosotros a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+}
+
+.Sobre_nosotros a:hover {
+    text-decoration: underline;
+}
+
+/* Bloque derecho */
+.redes_sociales {
+    text-align: right;
+}
+
+.redes_sociales img {
+    margin-left: 10px;
+}
+
+#redes img{
+    height: 40px;
+    width: 40px;
+}
+
+/* FIN PIE DE PÁGINA */
