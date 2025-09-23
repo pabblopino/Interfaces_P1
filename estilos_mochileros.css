@@ -342,4 +342,243 @@ footer {
     width: 40px;
 }
 
+/* === FORMULARIO REGISTRO (Versión A) === */
+
+.main-registro {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  min-height: calc(100vh - 200px);
+  background-color: #ffffff;
+}
+
+.formulario-registro {
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.formulario-registro h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario-registro form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Fila con dos inputs (ej: Nombre y Apellidos) */
+.formulario-registro .fila {
+  display: flex;
+  gap: 10px;
+}
+
+.formulario-registro input[type="text"],
+.formulario-registro input[type="email"],
+.formulario-registro input[type="password"],
+.formulario-registro input[type="date"],
+.formulario-registro input[type="file"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.formulario-registro input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.formulario-registro button {
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.formulario-registro button:hover {
+  background-color: #ddd;
+}
+
+/* enlace de política */
+.formulario-registro a {
+  color: blue;
+  text-decoration: none;
+}
+
+.formulario-registro a:hover {
+  text-decoration: underline;
+}
+
+/* ======== ESTILOS GENERALES ======== */
+aside {
+    width: 280px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 3px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+aside h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+aside h5 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #444;
+}
+
+/* ======== USUARIO / PERFIL ======== */
+.usuario {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.usuario .perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombre-usuario {
+    font-weight: bold;
+    color: #222;
+}
+
+.cerrar_sesion {
+    margin-top: 10px;
+    padding: 4px 12px;
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ======== BLOQUE BUSCA EXPERIENCIAS ======== */
+.busca-experiencias form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filtros label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.buscador input {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.icono-lupa {
+    padding: 6px 10px;
+    background: #457b9d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.icono-lupa:hover {
+    background: #1d3557;
+}
+
+/* ======== ÚLTIMOS CONSEJOS ======== */
+.ultimos-consejos nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ultimos-consejos nav li {
+    margin: 5px 0;
+}
+
+.ultimos-consejos nav a {
+    text-decoration: none;
+    color: #1d3557;
+    transition: color 0.3s ease;
+}
+
+.ultimos-consejos nav a:hover {
+    color: #e63946;
+}
+
+.form-consejo {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-consejo input,
+.form-consejo textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-consejo button {
+    background: #2a9d8f;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-consejo button:hover {
+    background: #21867a;
+}
+
+/* ======== MINI CALENDARIO ======== */
+.mini-calendario table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.mini-calendario th {
+    background: #457b9d;
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.mini-calendario td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    font-size: 14px;
+    height: 30px;
+}
+
+.mini-calendario td:hover {
+    background: #f1faee;
+    cursor: pointer;
+}
+
 /* FIN PIE DE PÁGINA */
