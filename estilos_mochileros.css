@@ -415,29 +415,6 @@ footer {
   text-decoration: underline;
 }
 
-/* ======== ESTILOS GENERALES ======== */
-aside {
-    width: 280px;
-    background: #f9f9f9;
-    padding: 15px;
-    border-left: 3px solid #ccc;
-    font-family: Arial, sans-serif;
-}
-
-aside h4 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-aside h5 {
-    font-size: 16px;
-    margin: 10px 0;
-    color: #444;
-}
 
 /* ======== USUARIO / PERFIL ======== */
 .usuario {
@@ -579,6 +556,25 @@ aside h5 {
 .mini-calendario td:hover {
     background: #f1faee;
     cursor: pointer;
+}
+
+.aside-usuario {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    /*Prueba*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.aside-usuario nav ul li {
+    margin-bottom: 12px; /* espacio entre los li */
 }
 
 /* FIN PIE DE PÁGINA */
