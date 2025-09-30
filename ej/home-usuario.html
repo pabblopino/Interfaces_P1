@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Mochileros sin fronteras</title>
-        <link rel="stylesheet" href="estilos_mochileros.css">
+        <link rel="stylesheet" href="style/styles.css">
     </head>
     <body>
         <!--Cabecera-->
@@ -14,16 +14,16 @@
             </div>
             <!-- Centro -->
             <div class="enlaces-iniciales">
-                <a href="https://store.steampowered.com/app/1356100/Furry_Love__Adult_18_Patch_FREE/?l=spanish">Inicio</a>
-                <a href="https://store.steampowered.com/app/3399950/Tu_madre/">Experiencias</a>
-                <a href="https://www.reddit.com/r/titanfolk/comments/1e0zpji/bro_watch_attack_on_titan_its_protagonist_is_a/?tl=es-419">Consejos</a>
-                <a href="https://www.reddit.com/r/venting/comments/1m59n9k/i_fucking_hate_you_pablo/?tl=es-419">Foro</a>
-                <a href="https://www.twitch.tv/alejandro89ros89">Contacto</a>
+                <a href="home.html">Inicio</a>
+                <a href="home.html">Experiencias</a>
+                <a href="home.html">Consejos</a>
+                <a href="home.html">Foro</a>
+                <a href="home.html">Contacto</a>
             </div>
 
             <!-- Derecha -->
             <div class="idioma">
-                <img src="Imágenes/Rodrigo_fresita.png" alt="Logo" height="25" width="25">
+                <img src="images/mochila_icono.png" alt="Logo" height="25" width="25">
                 <div class="selector-idioma">
                     <span>ES</span>
                     <span class="flecha">▼</span>
@@ -68,7 +68,7 @@
                         <div>
                             <h4>Hostal en Katmandú</h4>
                             <div class="galeria">
-                                <img src="" alt="" height="75px" width="75px">
+                                <img src="images/katmandu.jpeg" alt="Katmandú" height="100px" width="100px">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -78,7 +78,7 @@
                         <div>
                             <h4>Sudamérica en bus</h4>
                             <div class="galeria">
-                                <img src="" alt="" height="75px" width="75px">
+                                <img src="images/sudamerica.png" alt="Sudamérica" height="100px" width="100px">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -88,7 +88,7 @@
                         <div>
                             <h4>Visado para India</h4>
                             <div class="galeria">
-                                <img src="" alt="" height="75px" width="75px">
+                                <img src="images/india.png" alt="India" height="100px" width="100px">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -98,7 +98,7 @@
                         <div>
                             <h4>Vietnam: ruta en moto</h4>
                             <div class="galeria">
-                                <img src="" alt="" height="75px" width="75px">
+                                <img src="images/vietnam.jpeg" alt="Vietnam" height="100px" width="100px">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -108,7 +108,7 @@
                         <div>
                             <h4>Trekking en Perú</h4>
                             <div class="galeria">
-                                <img src="" alt="" height="75px" width="75px">
+                                <img src="images/peru.jpeg" alt="Perú" height="100px" width="100px">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -118,7 +118,7 @@
                         <div>
                             <h4>Safari en Tanzania</h4>
                             <div class="galeria">
-                                <img src="" alt="" height="75px" width="75px">
+                                <img src="images/tanzania.jpg" alt="Tanzania" height="100px" width="100px">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -129,57 +129,86 @@
                 </div>
             </div>
             <!--Barra lateral-->
-            <aside>
-                <!--Apartado de registro-->
-                <div class="registro">
-                    <div class="input-usuario">
-                        <input type="text" name="Usuario" placeholder="Usuario" id="">
-                    </div>
-                    <div class="input-usuario">
-                        <input type="text" name="Contraseña" placeholder="Contraseña" id="">
-                
-                    </div>
-                    <div>
-                        <input type="checkbox" id="recordar" name="recordar"> <!--Ver bien cómo funciona-->
-                        <label for="recordar">Recordar credenciales</label>
+            <aside class="aside-usuario" >
+                <!--Apartado de usuario-->
+                <div class="usuario">
+                    <div class="perfil">
+                        <img src="images/foto_perfil.png" alt="Imagen de perfil" height="80" width="80">
+                        <p class="nombre-usuario">Nombre de Usuario</p>
                     </div>
                     <div class="botones">
-                        <a href="home-usuario.html"> <button type="button">Iniciar sesión</button> </a>
-                        <a href="registro.html"><button type="button">Registro</button></a>
+                        <button type="button" class="cerrar_sesion">Cerrar sesión</button>
                     </div>
                 </div>        
-                <!--Apartado de información-->
-                <div>
-                    <h4>Top destinos mochileros</h4>
-                    <nav>
-                        <ul>
-                            <li>Tailandia</li>
-                            <li>Bolivia</li>
-                            <li>Nepal</li>
-                        </ul>
-                    </nav>
+
+                <!--Busca experiencias-->
+                <div class="busca-experiencias">
+                    <h4>Busca experiencias</h4>
+                    <form>
+                        <div class="filtros">
+                            <label><input type="checkbox" name="continente" value="asia"> Asia</label><br>
+                            <label><input type="checkbox" name="continente" value="europa"> Europa</label><br>
+                            <label><input type="checkbox" name="continente" value="america"> América</label><br>
+                            <label><input type="checkbox" name="continente" value="africa"> África</label><br>
+                        </div>
+                        <div class="buscador">
+                            <input type="text" placeholder="Buscar experiencias..." name="buscar">
+                            <button type="submit" class="icono-lupa">🔍</button>
+                        </div>
+                    </form>
                 </div>
 
-                <div>
-                    <h4>Consejos rápidos</h4>
+                <!--Últimos consejos-->
+                <div class="ultimos-consejos">
+                    <h4>Últimos consejos</h4>
                     <nav>
                         <ul>
-                            <li>Lleva seguro médico</li>
-                            <li>Infórmate sobre visados</li>
-                            <li>Viaja ligero</li>
+                            <li><a href="#">Cómo ahorrar en vuelos</a></li>
+                            <li><a href="#">Mejores apps para mochileros</a></li>
+                            <li><a href="#">Viajar solo: pros y contras</a></li>
                         </ul>
                     </nav>
+                    <form class="form-consejo">
+                        <h5>¿Tienes algún consejo?</h5>
+                        <input type="text" name="titulo" placeholder="Título del consejo">
+                        <textarea name="descripcion" placeholder="Escribe tu consejo..."></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
 
-                <div>
-                    <h4>Próximos encuentros</h4>
-                    <nav>
-                        <ul>
-                            <li>Madrid • 12/10</li>
-                            <li>Barcelona • 25/10</li>
-                            <li>Valencia • 08/11</li>
-                        </ul>
-                    </nav>
+                <!--Mini calendario-->
+                <div class="mini-calendario">
+                    <h4>Calendario</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>L</th>
+                                <th>M</th>
+                                <th>X</th>
+                                <th>J</th>
+                                <th>V</th>
+                                <th>S</th>
+                                <th>D</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+                            </tr>
+                            <tr>
+                                <td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+                            </tr>
+                            <tr>
+                                <td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+                            </tr>
+                            <tr>
+                                <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+                            </tr>
+                            <tr>
+                                <td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </aside>
         </main>
@@ -196,13 +225,13 @@
             </div>
             <div class="redes-sociales" id="redes">
                 <a href="https://www.instagram.com/pabblopino/" target="_blank">
-                    <img src="Imágenes/logo_instagram.png" alt="Instagram">
+                    <img src="images/logo_instagram.png" alt="Instagram">
                 </a>
                 <a href="https://www.tiktok.com/" target="_blank">
-                    <img src="Imágenes/logo_tiktok.png" alt="TikTok">
+                    <img src="images/logo_tiktok.png" alt="TikTok">
                 </a>
                 <a href="https://www.youtube.com/" target="_blank">
-                    <img src="Imágenes/logo_youtube.png" alt="YouTube">
+                    <img src="images/logo_youtube.png" alt="YouTube">
                 </a>
             </div>
         </footer>

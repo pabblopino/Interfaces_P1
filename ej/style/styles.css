@@ -1,6 +1,6 @@
 body{
-    font: 400 20px 'Poppins', sans-serif;
-    padding-left: 30px;
+  font: 400 20px 'Poppins', sans-serif;
+  padding-left: 30px;
 }
 
 /* CABECERA */
@@ -27,41 +27,41 @@ header {
 
 /* Logo + idioma alineados a la derecha */
 .idioma {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* separación entre logo e idioma */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* separación entre logo e idioma */
 }
 
 /* Creamos el reborde que tendra el selector del idioma */
 .selector-idioma {
-    display: flex;
-    align-items: center;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 4px 8px;
-    background-color: #fff;
-    font-size: 14px;
-    cursor: default;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 4px 8px;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: default;
 }
 
 .selector-idioma span {
-    margin: 0 2px;
+  margin: 0 2px;
 }
 
 .selector-idioma .flecha {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 /* FIN CABECERA */
 
 /* MAIN */
 main{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    background-color: gray;
-    padding-left: 25px;
-    gap: 20px;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: gray;
+  padding-left: 25px;
+  gap: 20px;
+  align-items: stretch;
 }
 
 /* BLOQUE SUPERIOR */
@@ -121,7 +121,7 @@ main{
 }
 
 .packs-contenido{
-  background-image:url("/Imágenes/fiordos.jpg");
+  background-image:url("../images/fiordos.jpg");
   background-size: cover;      /* el fondo ocupa todo el espacio */
   background-position: center; /* se centra la imagen */
   background-repeat: no-repeat; /* se evita repetición de la imagen */
@@ -174,17 +174,21 @@ main{
 /* BLOQUE INFERIOR -> Galería de experiencias */
 
 .galeria{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria img{
+  border-radius: 10px;
 }
 
 .opciones-galeria{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 .opciones-galeria button{
@@ -195,7 +199,7 @@ main{
 .corazon {
   width: 25px;
   height: 25px;
-  background-image: url("Imágenes/logo_corazon.png");
+  background-image: url("../images/logo_corazon.png");
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -245,33 +249,38 @@ main{
 principal y la barra lateral*/
 
 aside{
-    border: 2px solid #000;
-    border-radius: 10px;
-    padding-left: 50px;
-    margin-top: 20px;
-    margin-right: 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    /*Prueba*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding-left: 50px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  /*Prueba*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 aside nav ul li {
     margin-bottom: 12px; /* espacio entre los li */
 }
 
+aside a{
+  color: #1d3557;;
+  text-decoration: none;
+}
+
 .registro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-    margin-right: 50px;
-    border-bottom: 2px solid black;
-    padding-bottom: 50px;
-    font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  margin-right: 50px;
+  border-bottom: 2px solid black;
+  padding-bottom: 50px;
+  font-size: 15px;
 }
 
 .input-usuario input{
@@ -286,6 +295,10 @@ aside nav ul li {
   border-radius: 6px;
 }
 
+.botones a{
+  text-decoration: none;
+}
+
 #informacion{
   display:flex;
   flex-direction: column;
@@ -296,50 +309,54 @@ aside nav ul li {
 
 /* PIE DE PÁGINA */
 footer {
-    display: flex;
-    justify-content: space-between; /* separa los tres bloques */
-    align-items: center;
-    position: relative; /* necesario para centrar el bloque central */
-    padding: 20px;            /* centra verticalmente */
-    background-color: #f0f0f0;
-    border: 2px solid #000;
+  display: flex;
+  justify-content: space-between; /* separa los tres bloques */
+  align-items: center;
+  position: relative; /* necesario para centrar el bloque central */
+  padding: 20px;            /* centra verticalmente */
+  background-color: #f0f0f0;
+  border: 2px solid #000;
 }
 
 /* Bloque izquierdo */
 .copyright {
-    text-align: left;
+  text-align: left;
 }
 
 /* Bloque central centrado */
 .sobre-nosotros {
-    position: absolute; /* lo sacamos del flujo del flex */
-    left: 50%;          /* mitad de la página */
-    transform: translateX(-50%); /* lo centramos exactamente */
-    text-align: center;
+  position: absolute; /* lo sacamos del flujo del flex */
+  left: 50%;          /* mitad de la página */
+  transform: translateX(-50%); /* lo centramos exactamente */
+  text-align: center;
 }
 
 .sobre-nosotros a {
-    margin: 0 5px;
-    text-decoration: none;
-    color: #000;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #000;
 }
 
 .sobre-nosotros a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Bloque derecho */
 .redes-sociales {
-    text-align: right;
+  text-align: right;
+}
+
+.redes-sociales a{
+  text-decoration: none;
 }
 
 .redes-sociales img {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 #redes img{
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 /* === FORMULARIO REGISTRO (Versión A) === */
@@ -418,167 +435,170 @@ footer {
 
 /* ======== USUARIO / PERFIL ======== */
 .usuario {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .usuario .perfil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nombre-usuario {
-    font-weight: bold;
-    color: #222;
+  font-weight: bold;
+  color: #222;
 }
 
 .cerrar_sesion {
-    margin-top: 10px;
-    padding: 4px 12px;
-    background: #ff0000;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+  margin-top: 10px;
+  padding: 4px 12px;
+  background: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.perfil img{
+  margin-top: 20px;
 }
 
 /* ======== BLOQUE BUSCA EXPERIENCIAS ======== */
 .busca-experiencias form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .filtros label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 
 .buscador {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .buscador input {
-    flex: 1;
-    padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .icono-lupa {
-    padding: 6px 10px;
-    background: #457b9d;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  padding: 6px 10px;
+  background: #457b9d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .icono-lupa:hover {
-    background: #1d3557;
+  background: #1d3557;
 }
 
 /* ======== ÚLTIMOS CONSEJOS ======== */
 .ultimos-consejos nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .ultimos-consejos nav li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .ultimos-consejos nav a {
-    text-decoration: none;
-    color: #1d3557;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #1d3557;
+  transition: color 0.3s ease;
 }
 
 .ultimos-consejos nav a:hover {
-    color: #e63946;
+  color: #e63946;
 }
 
 .form-consejo {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .form-consejo input,
 .form-consejo textarea {
-    width: 100%;
-    padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .form-consejo button {
-    background: #2a9d8f;
-    color: #fff;
-    border: none;
-    padding: 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background: #2a9d8f;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .form-consejo button:hover {
-    background: #21867a;
+  background: #21867a;
 }
 
 /* ======== MINI CALENDARIO ======== */
 .mini-calendario table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 20px;
 }
 
 .mini-calendario th {
-    background: #457b9d;
-    color: #fff;
-    padding: 5px;
-    font-size: 14px;
+  background: #457b9d;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
 }
 
 .mini-calendario td {
-    border: 1px solid #ddd;
-    padding: 6px;
-    font-size: 14px;
-    height: 30px;
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 14px;
+  height: 30px;
 }
 
 .mini-calendario td:hover {
-    background: #f1faee;
-    cursor: pointer;
+  background: #f1faee;
+  cursor: pointer;
 }
 
 .aside-usuario {
-    border: 2px solid #000;
-    border-radius: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 20px;
-    margin-right: 20px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    /*Prueba*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  /*Prueba*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .aside-usuario nav ul li {
-    margin-bottom: 12px; /* espacio entre los li */
+  margin-bottom: 12px; /* espacio entre los li */
 }
 
 /* FIN PIE DE PÁGINA */
-
 
 
 /*CSS Formulario*/
@@ -588,15 +608,13 @@ footer {
   gap: 100px;
 }
 
-
 .detalle-pack{
-  background-image: url("Imágenes/fiordos.jpg");
+  background-image: url("../images/fiordos.jpg");
 }
 
 #pack-formulario{
   margin-top: 25px;
 }
-
 
 .descripcion-pack{
   border: 1px solid #000;
