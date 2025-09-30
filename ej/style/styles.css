@@ -9,7 +9,7 @@ header {
   align-items: center;        /* centra verticalmente los tres bloques */
   justify-content: space-between; /* separa izquierda - centro - derecha */
   padding: 10px 20px;
-  background-color: #f0f0f0;
+  background-color: #99861b;
   border: 2px solid #000;
 }
 
@@ -58,7 +58,7 @@ header {
 main{
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: gray;
+  background-color: rgb(255, 255, 255);
   padding-left: 25px;
   gap: 20px;
   align-items: stretch;
