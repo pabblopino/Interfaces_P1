@@ -616,16 +616,62 @@ footer {
   margin-top: 25px;
 }
 
-.descripcion-pack{
-  border: 1px solid #000;
-  border-radius: 5px;
-  background-color: #fff;
-  margin: 25px;
+/* Para agrupar fecha y CVV */
+.pago-tarjeta {
+  display: flex;
+  justify-content: space-between; /* separa los elementos */
+  gap: 20px;                      /* espacio entre ellos */
+  width: 100%;                    /* ocupa todo el ancho disponible */
 }
 
-.pago-tarjeta{
+/* Ajustamos los inputs dentro */
+.pago-tarjeta input {
+  flex: 1;               /* que ocupen espacio de forma equilibrada */
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+/* Para la fila de botones */
+.botones-form {
   display: flex;
-  width: 100px;
-  gap: 25px;
-  justify-content: space-between;
+  justify-content: center; /* centrados en la página */
+  gap: 40px;               /* espacio entre ellos */
+  margin-top: 20px;
+}
+
+.botones-form button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+/* Bloque del pack (imagen y título) */
+.packs-contenido-2 {
+  background-image:url("../images/fiordos.jpg");
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 100%;
+  max-width: 800px;
+  height: 300px;   /* altura fija */
+  border: 2px solid #000;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Bloque de la descripción con la misma altura */
+.descripcion-pack {
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 20px;   /* para separarlo de arriba */
+  height: 300px;      /* mismo alto que la foto */
+  padding: 15px;
+  box-sizing: border-box; /* incluye el padding dentro de la altura */
+  overflow-y: auto;   /* si el texto es largo, aparece scroll */
 }
