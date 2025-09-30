@@ -578,3 +578,36 @@ footer {
 }
 
 /* FIN PIE DE PÁGINA */
+
+
+
+/*CSS Formulario*/
+
+.compra{
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+
+.detalle-pack{
+  background-image: url("Imágenes/fiordos.jpg");
+}
+
+#pack-formulario{
+  margin-top: 25px;
+}
+
+
+.descripcion-pack{
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  margin: 25px;
+}
+
+.pago-tarjeta{
+  display: flex;
+  width: 100px;
+  gap: 25px;
+  justify-content: space-between;
+}
