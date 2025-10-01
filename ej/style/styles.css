@@ -1,7 +1,6 @@
 body{
   font: 400 20px 'Poppins', sans-serif;
   padding-left: 30px;
-  width: 100%;
 }
 
 /* CABECERA */
@@ -10,7 +9,7 @@ header {
   align-items: center;        /* centra verticalmente los tres bloques */
   justify-content: space-between; /* separa izquierda - centro - derecha */
   padding: 10px 20px;
-  background-color: #99861b;
+  background-color: #73abd8;
   border: 2px solid #000;
 }
 
@@ -42,7 +41,6 @@ header {
   padding: 4px 8px;
   background-color: #fff;
   font-size: 14px;
-  cursor: default;
 }
 
 .selector-idioma span {
@@ -108,7 +106,7 @@ main > *{
 .bloque-superior-2 {
   border: 2px solid #000;
   padding: 20px;
-  background-color: #fff;
+  background-color: #f1faee;
   margin-bottom: 20px;
   border-radius: 10px;
 }
@@ -130,8 +128,7 @@ main > *{
   background-position: center; /* se centra la imagen */
   background-repeat: no-repeat; /* se evita repetición de la imagen */
   width: 100%;
-  max-width: 800px;
-  height: 300px;
+  box-sizing: border-box;
   border: 2px solid #000;
   border-radius: 10px;
 
@@ -220,7 +217,7 @@ main > *{
 .bloque-experiencias {
   border: 2px solid #000;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #e9ecef;
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -268,7 +265,6 @@ aside{
   margin-right: 20px;
   background-color: #fff;
   margin-bottom: 20px;
-  /*Prueba*/
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -279,7 +275,7 @@ aside nav ul li {
 }
 
 aside a{
-  color: #1d3557;;
+  color: #1d3557;
   text-decoration: none;
 }
 
@@ -327,7 +323,7 @@ aside a{
 /* PIE DE PÁGINA */
 footer {
   padding: 20px;            /* centra verticalmente */
-  background-color: #f0f0f0;
+  background-color: #73abd8;
   border: 2px solid #000;
 }
 
@@ -623,7 +619,6 @@ footer {
   margin-right: 20px;
   background-color: #fff;
   margin-bottom: 20px;
-  /*Prueba*/
   display: flex;
   flex-direction: column;
   justify-content: space-around;
