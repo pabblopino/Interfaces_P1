@@ -403,7 +403,7 @@ footer {
   border: 2px solid #000;
   border-radius: 10px;
   background-color: #ffffff;
-  width: 500px;
+  max-width: 500px;
   margin: 30px auto;
   padding: 20px;
   display: flex;
@@ -640,7 +640,6 @@ footer {
 
 .compra{
   grid-template-columns: 1fr 2fr;
-  gap: 100px;
 }
 
 .detalle-pack{
@@ -730,6 +729,11 @@ footer {
     text-align: center;
   }
 
+  .compra{
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 /* ======== RESPONSIVE CON MÓVIL ======== */
