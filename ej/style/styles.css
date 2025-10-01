@@ -1,6 +1,7 @@
 body{
   font: 400 20px 'Poppins', sans-serif;
   padding-left: 30px;
+  width: 100%;
 }
 
 /* CABECERA */
@@ -59,9 +60,12 @@ main{
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: rgb(255, 255, 255);
-  padding-left: 25px;
   gap: 20px;
   align-items: stretch;
+}
+
+main > *{
+  min-width: 0; /* Con esto conseguimos que al hacerlo responsive, los bloques y el aside se reduzcan correctamente*/
 }
 
 /* BLOQUE SUPERIOR */
@@ -134,6 +138,7 @@ main{
   display: flex;
   flex-direction: column;
   padding: 10px;
+  height: auto; /* ajusta según contenido */
 }
 
 .cabecera-packs{
@@ -182,11 +187,12 @@ main{
   gap: 20px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;     /* permite que se muevan a la siguiente línea */
 }
 
 .galeria img{
-  height: 100px;
-  width: 100px;
+  max-width: 100px;   
+  aspect-ratio: 1 / 1; /* Para que la imagen se mantenga cuadrada */
   border-radius: 10px;
 }
 
@@ -453,6 +459,9 @@ footer {
   text-decoration: underline;
 }
 
+.formulario-registro form{
+  display: grid;
+}
 
 /* ======== USUARIO / PERFIL ======== */
 .usuario {
@@ -678,9 +687,60 @@ footer {
   border: 2px solid #000;
   border-radius: 5px;
   background-color: #fff;
-  margin-top: 20px;   /* para separarlo de arriba */
+  margin: 20px 0; /* margen solo arriba y abajo */   
   height: 300px;      /* mismo alto que la foto */
   padding: 15px;
   box-sizing: border-box; /* incluye el padding dentro de la altura */
   overflow-y: auto;   /* si el texto es largo, aparece scroll */
+}
+
+/* ======== RESPONSIVE CON TABLET ======== */
+
+@media only screen and (max-width: 768px) {
+
+  body{
+    font-size: 18px;
+  }
+
+  main {
+    grid-template-columns: 1fr; /* Para que el aside se ponga debajo del bloque principal */
+  }
+
+  #experiencias {
+    grid-template-columns: repeat(2, 1fr); /* De 3 columnas, bajamos a 2 */
+  }
+
+  header{
+    flex-direction: column; /* Ponemos los elementos de la cabecera en vertical */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-sup{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sobre-nosotros{
+    flex-direction: column;
+    align-items: center;
+    position: static;   /* quitamos el absolute */
+    transform: none;    /* quitamos la translación */
+    text-align: center;
+  }
+
+}
+
+/* ======== RESPONSIVE CON MÓVIL ======== */
+
+@media only screen and (max-width: 600px){
+
+  body{
+    font-size: 16px;
+  }
+
+  #experiencias {
+    grid-template-columns: 1fr; /* De 2 columnas en tablet, bajamos a 1 */
+  }
 }
