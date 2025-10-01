@@ -1,5 +1,6 @@
 <!--Estructura principal de la práctica-->
-<html>
+<!DOCTYPE html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <title>Mochileros sin fronteras</title>
@@ -54,7 +55,9 @@
 
                                 <p>Noruega: avión, hotel y excursión por los fiordos noruegos</p>
                                 
-                                <a href="compra.html"> <button type="button" class="boton-comprar">Comprar</button> </a>
+                                <form action="compra.html" method="get" class="boton-comprar">
+                                    <button type="submit">Comprar</button>
+                                </form>
                             </div>
                             
                             <button class="flecha">▶</button>
@@ -68,7 +71,7 @@
                         <div>
                             <h4>Hostal en Katmandú</h4>
                             <div class="galeria">
-                                <img src="images/katmandu.jpeg" alt="Katmandú" height="100px" width="100px">
+                                <img src="images/katmandu.jpeg" alt="Katmandú">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -78,7 +81,7 @@
                         <div>
                             <h4>Sudamérica en bus</h4>
                             <div class="galeria">
-                                <img src="images/sudamerica.png" alt="Sudamérica" height="100px" width="100px">
+                                <img src="images/sudamerica.png" alt="Sudamérica">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -88,7 +91,7 @@
                         <div>
                             <h4>Visado para India</h4>
                             <div class="galeria">
-                                <img src="images/india.png" alt="India" height="100px" width="100px">
+                                <img src="images/india.png" alt="India">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -98,7 +101,7 @@
                         <div>
                             <h4>Vietnam: ruta en moto</h4>
                             <div class="galeria">
-                                <img src="images/vietnam.jpeg" alt="Vietnam" height="100px" width="100px">
+                                <img src="images/vietnam.jpeg" alt="Vietnam">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -108,7 +111,7 @@
                         <div>
                             <h4>Trekking en Perú</h4>
                             <div class="galeria">
-                                <img src="images/peru.jpeg" alt="Perú" height="100px" width="100px">
+                                <img src="images/peru.jpeg" alt="Perú">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -118,7 +121,7 @@
                         <div>
                             <h4>Safari en Tanzania</h4>
                             <div class="galeria">
-                                <img src="images/tanzania.jpg" alt="Tanzania" height="100px" width="100px">
+                                <img src="images/tanzania.jpg" alt="Tanzania">
                                 <div class="opciones-galeria">
                                     <button class="corazon"></button>
                                     <button type="button">Ver más</button>
@@ -133,10 +136,10 @@
                 <!--Apartado de registro-->
                 <div class="registro">
                     <div class="input-usuario">
-                        <input type="text" name="Usuario" placeholder="Usuario" id="">
+                        <input type="text" name="Usuario" placeholder="Usuario">
                     </div>
                     <div class="input-usuario">
-                        <input type="text" name="Contraseña" placeholder="Contraseña" id="">
+                        <input type="text" name="Contraseña" placeholder="Contraseña">
                 
                     </div>
                     <div>
@@ -144,8 +147,12 @@
                         <label for="recordar">Recordar credenciales</label>
                     </div>
                     <div class="botones">
-                        <a href="home-usuario.html"> <button type="button">Iniciar sesión</button> </a>
-                        <a href="registro.html"><button type="button">Registro</button></a>
+                        <form action="home-usuario.html" method="get">
+                            <button type="submit">Iniciar sesión</button>
+                        </form>
+                        <form action="registro.html" method="get">
+                            <button type="submit">Registro</button>
+                        </form>
                     </div>
                 </div>        
                 <!--Apartado de información-->
@@ -154,7 +161,7 @@
                     <nav>
                         <ul>
                             <li><a href="https://es.wikipedia.org/wiki/Paris">Paris</a></li>
-                            <li><a href="https://es.wikipedia.org/wiki/Nueva York">Nueva York</a></li>
+                            <li><a href="https://es.wikipedia.org/wiki/Nueva%20York">Nueva York</a></li>
                             <li><a href="https://es.wikipedia.org/wiki/Bangkok">Bangkok</a></li>
                         </ul>
                     </nav>
@@ -186,6 +193,7 @@
 
         <!--Pie de página-->
         <footer>
+          <div class="footer-sup">
             <div class="copyright">
                 <p>&copy; 2025 Mochileros sin fronteras</p>
             </div>
@@ -205,6 +213,16 @@
                     <img src="images/logo_youtube.png" alt="YouTube">
                 </a>
             </div>
+          </div>
+          <div class="footer-inf">
+            <p>Suscríbete a nuestra newsletter</p>
+            <div id="newsletter">
+                <input type="text" name="Email" placeholder="Email">
+                <form action="home.html" method="get">
+                    <button type="submit">Registro</button>
+                </form>
+            </div>
+          </div>
         </footer>
     </body>
 </html>

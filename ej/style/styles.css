@@ -164,7 +164,11 @@ main{
 }
 
 .boton-comprar{
+  display: flex;
   align-self: flex-end;
+}
+
+.boton-comprar button{
   border-radius: 6px;
   cursor: pointer;
 }
@@ -181,6 +185,8 @@ main{
 }
 
 .galeria img{
+  height: 100px;
+  width: 100px;
   border-radius: 10px;
 }
 
@@ -289,6 +295,11 @@ aside a{
   border-radius: 4px;
 }
 
+.botones{
+  display: flex;
+  gap: 10px;
+}
+
 .botones button{
   height: 35px;
   width: 100px;
@@ -309,13 +320,26 @@ aside a{
 
 /* PIE DE PÁGINA */
 footer {
+  padding: 20px;            /* centra verticalmente */
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+}
+
+.footer-sup{
   display: flex;
   justify-content: space-between; /* separa los tres bloques */
   align-items: center;
   position: relative; /* necesario para centrar el bloque central */
-  padding: 20px;            /* centra verticalmente */
-  background-color: #f0f0f0;
-  border: 2px solid #000;
+}
+
+.footer-inf {
+  text-align: center;
+}
+
+#newsletter{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Bloque izquierdo */
@@ -376,17 +400,14 @@ footer {
   width: 500px;
   margin: 30px auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .formulario-registro h2 {
   text-align: center;
   margin-bottom: 20px;
-}
-
-.formulario-registro form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 /* Fila con dos inputs (ej: Nombre y Apellidos) */
@@ -450,7 +471,12 @@ footer {
   color: #222;
 }
 
-.cerrar_sesion {
+#boton-cerrar-sesion{
+  display: flex;
+  justify-content: center;
+}
+
+.cerrar-sesion {
   margin-top: 10px;
   padding: 4px 12px;
   background: #ff0000;
@@ -645,23 +671,6 @@ footer {
   border-radius: 6px;
   cursor: pointer;
   border: 1px solid #000;
-}
-
-/* Bloque del pack (imagen y título) */
-.packs-contenido-2 {
-  background-image:url("../images/fiordos.jpg");
-  background-size: cover;      
-  background-position: center; 
-  background-repeat: no-repeat; 
-  width: 100%;
-  max-width: 800px;
-  height: 300px;   /* altura fija */
-  border: 2px solid #000;
-  border-radius: 10px;
-
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
 }
 
 /* Bloque de la descripción con la misma altura */
