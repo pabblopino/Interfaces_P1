@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mochileros sin fronteras - Registro</title>
         <link rel="stylesheet" href="style/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script/registro.js" defer></script>
     </head>
     <body>
         <!--Cabecera-->
@@ -37,41 +39,56 @@
         <main class="main-registro">
             <div class="formulario-registro">
                 <h2>Registro de nuevos usuarios</h2>
-                <div class="fila">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                    <input type="text" name="apellidos" placeholder="Apellidos" required>
-                </div>
 
-                <div class="fila">
-                    <input type="email" name="correo" placeholder="Correo electrónico" required>
-                    <input type="email" name="correo2" placeholder="Confirmar correo" required>
-                </div>
+                <form id="formularioRegistro">
+                    <div class="fila">
+                        <input type="text" id ="nombre" name="nombre" placeholder="Nombre*" required>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos*" required>
+                    </div>
+                    <div class="fila-error">
+                        <p class="error-texto" id="errorNombre"></p>
+                        <p class="error-texto" id="errorApellidos"></p>
+                    </div>
 
-                <div class="fila">
-                    <label for="fecha">Fecha de nacimiento</label>
-                    <input type="date" name="fecha" id="fecha" required>
-                </div>
+                    <div class="fila">
+                        <input type="email" id="correo" name="correo" placeholder="Correo electrónico*" required>
+                        <input type="email" id="correo2" name="correo2" placeholder="Confirmar correo*" required>
+                    </div>
+                    <div class="fila-error">
+                        <p class="error-texto" id="errorCorreo"></p>
+                        <p class="error-texto" id="errorCorreo2"></p>
+                    </div>
 
-                <div class="fila">
-                    <input type="text" name="login" placeholder="Login" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                </div>
+                    <div class="fila">
+                        <label for="fecha">Fecha de nacimiento</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <div class="fila-error"><p class="error-texto" id="errorFecha"></p></div>
 
-                <div class="fila">
-                    <label for="imagen">Subir imagen de perfil</label>
-                    <input type="file" name="imagen" id="imagen">
-                </div>
+                    <div class="fila">
+                        <input type="text" id="login" name="login" placeholder="Login*" required>
+                        <input type="password" id="password" name="password" placeholder="Password*" required>
+                    </div>
+                    <div class="fila-error">
+                        <p class="error-texto" id="errorLogin"></p>
+                        <p class="error-texto" id="errorPassword"></p>
+                    </div>
 
-                <div class="fila">
-                    <input type="checkbox" id="politica" required>
-                    <label for="politica">Acepto la <a href="#">Política de privacidad</a></label>
-                </div>
+                    <div class="fila">
+                        <label for="imagen">Subir imagen de perfil*</label>
+                        <input type="file" id="imagen" name="imagen">
+                    </div>
+                    <div class="fila-error"><p class="error-texto" id="errorImagen"></p></div>
 
-                <div class="fila">
-                    <form action="home-usuario.html" method="get">
-                        <button type="submit">Guardar datos y acceder</button>
-                    </form>
-                </div>
+                    <div class="fila">
+                        <input type="checkbox" id="politica" required>
+                        <label for="politica">Acepto la <a href="#">Política de privacidad</a>*</label>
+                    </div>
+
+                    <div class="fila">
+                        <button type="button" id="btnGuardar">Guardar datos y acceder</button>
+                    </div>
+                </form>
             </div>
         </main>
 

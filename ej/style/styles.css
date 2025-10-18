@@ -495,6 +495,26 @@ footer {
   margin-top: 20px;
 }
 
+/* === ESTILOS PARA MENSAJES DE ERROR DEL FORMULARIO === */
+.error-texto {
+    color: #e63946;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    /* Altura fija para que el espacio ya esté reservado 
+       y el formulario no "salte" cuando aparece el texto. */
+    height: 16px; 
+}
+
+.fila-error {
+    display: flex;
+    gap: 10px;
+}
+
+.fila-error > p {
+    flex: 1;
+}
+
 /* ======== BLOQUE BUSCA EXPERIENCIAS ======== */
 .busca-experiencias form {
   display: flex;
