@@ -1,3 +1,59 @@
+$(document).ready(function() {
+
+  //Leer parámetro de la URL
+  const params = new URLSearchParams(window.location.search);
+  const packId = params.get("id_pack"); // Ejemplo: fiordos, ruta66, asiatico
+
+  //Definir los packs disponibles
+  const packs = {
+    fiordos: {
+      nombre: "Fiordos Noruegos",
+      precio: "700€",
+      descripcion: "Noruega: avión, hotel y excursión por los fiordos noruegos.",
+      detalle: "Los fiordos noruegos son profundas y estrechas entradas de mar, con laderas empinadas y acantilados altos, formadas por la erosión de glaciares. Se caracterizan por su belleza escénica, con cascadas espectaculares, montañas escarpadas y exuberante vegetación.",
+      imagen: "images/fiordos.jpg"
+    },
+    ruta66: {
+      nombre: "Ruta 66 en Moto",
+      precio: "1500€",
+      descripcion: "Estados Unidos: aventura en moto por la icónica Ruta 66.",
+      detalle: "La Ruta 66 recorre Estados Unidos de costa a costa, pasando por desiertos, moteles clásicos y paisajes icónicos. Una experiencia ideal para los amantes de la carretera y la libertad.",
+      imagen: "images/ruta66.jpg"
+    },
+    asiatico: {
+      nombre: "Sudeste Asiático",
+      precio: "1200€",
+      descripcion: "Vietnam, Camboya y Tailandia en un viaje inolvidable.",
+      detalle: "El Sudeste Asiático combina playas paradisíacas, templos milenarios y una gastronomía única. Descubre culturas fascinantes y paisajes exóticos en un solo viaje.",
+      imagen: "images/sudeste_asiatico.webp"
+    }
+  };
+
+  // Actualizar contenido dinámicamente
+  const pack = packs[packId];
+
+  if (pack) {
+    // Cabecera (nombre y precio)
+    $(".cabecera-packs h3").eq(0).text(pack.nombre);
+    $(".cabecera-packs h3").eq(1).text(pack.precio);
+
+    // Descripción corta
+    $(".packs-contenido p").text(pack.descripcion);
+
+    // Descripción larga
+    $(".descripcion-pack p").text(pack.detalle);
+
+    // Imagen de fondo
+    $(".packs-contenido").css("background-image", `url('${pack.imagen}')`);
+  } else {
+    // Si no se encuentra el pack, mostramos un aviso básico
+    $(".cabecera-packs h3").eq(0).text("Pack no encontrado");
+    $(".cabecera-packs h3").eq(1).text("");
+    $(".packs-contenido p").text("El pack seleccionado no existe o ha sido eliminado.");
+  }
+
+});
+
 function handleCompra(event){
 
     event.preventDefault();
