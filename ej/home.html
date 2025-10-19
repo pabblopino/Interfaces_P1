@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mochileros sin fronteras</title>
         <link rel="stylesheet" href="style/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script/home.js" type="module" defer></script>
     </head>
     <body>
         <!--Cabecera-->
@@ -45,23 +47,47 @@
                     </div>
                     <!--Bloque Superior 2-->
                     <div class="bloque-superior-2">
-                        <div id="packs">
-                            <button class="flecha-pack">◀</button>
+                        <div id="packs" class="carrusel-container">
                             
-                            <div class="packs-contenido">
-                                <div class="cabecera-packs">
-                                    <h3>Packs fiordos noruegos</h3>
-                                    <h3>700€</h3>
+                            <div class="carrusel-track">
+                                
+                                <div class="packs-contenido carrusel-item" style="background-image: url('images/fiordos.jpg');">
+                                    <div class="cabecera-packs">
+                                        <h3>Packs fiordos noruegos</h3>
+                                        <h3>700€</h3>
+                                    </div>
+                                    <p>Noruega: avión, hotel y excursión por los fiordos.</p>
+                                    <div class="boton-comprar">
+                                        <a href="compra.html?id_pack=fiordos"><button type="button">Comprar</button></a>
+                                    </div>
                                 </div>
 
-                                <p>Noruega: avión, hotel y excursión por los fiordos noruegos</p>
+                                <div class="packs-contenido carrusel-item" style="background-image: url('images/sudeste_asiatico.webp');">
+                                    <div class="cabecera-packs">
+                                        <h3>Sudeste Asiático</h3>
+                                        <h3>1200€</h3>
+                                    </div>
+                                    <p>Tailandia, Vietnam y Camboya: ruta completa.</p>
+                                    <div class="boton-comprar">
+                                        <a href="compra.html?id_pack=asiatico"><button type="button">Comprar</button></a>
+                                    </div>
+                                </div>
+
+                                <div class="packs-contenido carrusel-item" style="background-image: url('images/ruta66.jpg');">
+                                    <div class="cabecera-packs">
+                                        <h3>Ruta 66 en Moto</h3>
+                                        <h3>1500€</h3>
+                                    </div>
+                                    <p>EE.UU.: Alquiler de moto y ruta por la mítica Ruta 66.</p>
+                                    <div class="boton-comprar">
+                                        <a href="compra.html?id_pack=ruta66"><button type="button">Comprar</button></a>
+                                    </div>
+                                </div>
                                 
-                                <form action="compra.html" method="get" class="boton-comprar">
-                                    <button type="submit">Comprar</button>
-                                </form>
                             </div>
                             
-                            <button class="flecha">▶</button>
+                            <button class="carrusel-btn prev">◀</button>
+                            <button class="carrusel-btn next">▶</button>
                         </div>
                     </div>
                 </div>
@@ -137,23 +163,23 @@
                 <!--Apartado de registro-->
                 <div class="registro">
                     <div class="input-usuario">
-                        <input type="text" name="Usuario" placeholder="Usuario">
+                        <input type="text" id="usuario" placeholder="Usuario">
                     </div>
                     <div class="input-usuario">
-                        <input type="text" name="Contraseña" placeholder="Contraseña">
+                        <input type="password" id="password" placeholder="Contraseña">
                 
                     </div>
+
+                    <p class="error-texto" id="errorLogin"></p>
+
                     <div>
-                        <input type="checkbox" id="recordar" name="recordar"> <!--Ver bien cómo funciona-->
+                        <input type="checkbox" id="recordar" name="recordar">
                         <label for="recordar">Recordar credenciales</label>
                     </div>
+
                     <div class="botones">
-                        <form action="home-usuario.html" method="get">
-                            <button type="submit">Iniciar sesión</button>
-                        </form>
-                        <form action="registro.html" method="get">
-                            <button type="submit">Registro</button>
-                        </form>
+                        <button type="button" id="btnIniciarSesion">Iniciar sesión</button>
+                        <a href="registro.html"><button type="button">Registro</button></a>
                     </div>
                 </div>        
                 <!--Apartado de información-->

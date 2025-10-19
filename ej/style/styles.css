@@ -175,6 +175,58 @@ main > *{
   cursor: pointer;
 }
 
+/* === ESTILOS PARA EL CARRUSEL DE PACKS === */
+
+/* El contenedor principal oculta los packs que se salen de su área
+   y sirve de referencia para posicionar los botones. */
+.carrusel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* ¡La regla más importante! Oculta los demás slides. */
+    border-radius: 10px; /* Mantiene tus bordes redondeados. */
+}
+
+/* La pista es un contenedor flexible que se moverá horizontalmente.
+   Contiene todos los packs uno al lado del otro. */
+.carrusel-track {
+    display: flex;
+    height: 100%;
+    /* La transición crea el efecto de deslizamiento suave al cambiar de pack. */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Cada pack (item) debe ocupar el 100% del ancho del contenedor
+   para que solo se vea uno a la vez. */
+.carrusel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    /* Tus estilos existentes en .packs-contenido se mantienen. */
+}
+
+/* Estilos para los botones de navegación del carrusel.
+   Se posicionan de forma absoluta sobre el contenedor. */
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Los centra verticalmente. */
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10; /* Se asegura de que estén por encima de las imágenes. */
+}
+
+.prev {
+    left: 10px; /* Botón izquierdo. */
+}
+
+.next {
+    right: 10px; /* Botón derecho. */
+}
+
 /* FIN BLOQUE SUPERIOR 2 */
 
 /* BLOQUE INFERIOR -> Galería de experiencias */

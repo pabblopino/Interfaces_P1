@@ -7,7 +7,7 @@
         <title>Mochileros sin fronteras - Registro</title>
         <link rel="stylesheet" href="style/styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="script/registro.js" defer></script>
+        <script src="script/registro.js" type="module" defer></script>
     </head>
     <body>
         <!--Cabecera-->
@@ -40,7 +40,7 @@
             <div class="formulario-registro">
                 <h2>Registro de nuevos usuarios</h2>
 
-                <form id="formularioRegistro">
+                <form id="formularioRegistro" name="registro" novalidate>
                     <div class="fila">
                         <input type="text" id ="nombre" name="nombre" placeholder="Nombre*" required>
                         <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos*" required>
@@ -81,12 +81,12 @@
                     <div class="fila-error"><p class="error-texto" id="errorImagen"></p></div>
 
                     <div class="fila">
-                        <input type="checkbox" id="politica" required>
+                        <input type="checkbox" id="politica" name="politica" required>
                         <label for="politica">Acepto la <a href="#">Política de privacidad</a>*</label>
                     </div>
 
                     <div class="fila">
-                        <button type="button" id="btnGuardar">Guardar datos y acceder</button>
+                        <button type="submit" id="btnGuardar">Guardar datos y acceder</button>
                     </div>
                 </form>
             </div>
