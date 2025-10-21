@@ -1,9 +1,31 @@
+import { getRegisteredUser } from '../module/users.mjs';
 import { initCarousel } from '../module/carousel.mjs';
 
-$(document).ready(function(){
-    // Falta poner todo este código
+$(document).ready(function() {
+    const usuario = getRegisteredUser();
+    const sesionActiva = sessionStorage.getItem('sesionIniciada');
 
+    if (!sesionActiva || !usuario) {
+        alert('Debes iniciar sesión primero.');
+        window.location.href = 'home.html';
+        return;
+    }
 
-    // Se inicializa el carrusel
+    // 🔹 Mostrar nombre completo
+    $('.nombre-usuario').text(usuario.nombre + ' ' + usuario.apellidos);
+
+    // 🔹 Mostrar la foto de perfil si existe
+    if (usuario.imagen) {
+        $('.perfil img').attr('src', usuario.imagen);
+    }
+
+    // 🔹 Botón de cerrar sesión
+    $('.cerrar-sesion').on('click', function() {
+        sessionStorage.removeItem('sesionIniciada');
+        alert('Has cerrado sesión.');
+        window.location.href = 'home.html';
+    });
+
+    // 🔹 Carrusel
     initCarousel();
 });

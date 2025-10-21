@@ -110,25 +110,29 @@ function handleRegister(event) {
 
 
     // Resultado de la validación
-    if (form_valido){
-        // Se crea un objeto usuario con toda la información
-        const usuario = {
-            login: login,
-            password: password,
-            nombre: nombre,
-            apellidos: apellidos,
-            correo: correo,
-            fecha_nacimiento: fecha_val
+     if (form_valido) {
+        // 🔸 Convertir la imagen a base64 para poder guardarla de forma persistente
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const imagenBase64 = e.target.result;
+
+            const usuario = {
+                login: login,
+                password: password,
+                nombre: nombre,
+                apellidos: apellidos,
+                correo: correo,
+                fecha_nacimiento: fecha_val,
+                imagen: imagenBase64 // se guarda en base64
+            };
+
+            register(usuario);
+            alert("Registro exitoso. ¡Bienvenido, " + nombre + "!");
+            sessionStorage.setItem('sesionIniciada', 'true');
+            window.location.href = 'home-usuario.html';
         };
-
-        // Se guarda el objeto en el local storage
-        register(usuario);
-
-        alert("Formulario validado correctamente.");
-
-        // Se redirige a la página home con la sesión del usuario
-        window.location.href = 'home-usuario.html';
+        reader.readAsDataURL(imagen_file);
     }
 }
-// Asigna nuestra función al evento 'submit' del formulario
+
 document.forms['registro'].addEventListener('submit', handleRegister);

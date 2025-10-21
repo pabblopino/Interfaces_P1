@@ -26,4 +26,11 @@ function login(user, password){
     return 'USER_VALID';    
 }
 
-export { register, login };
+function getRegisteredUser() {
+    const registered_user_str = localStorage.getItem('registered_user');
+    if (!registered_user_str) return null;
+    return JSON.parse(registered_user_str);
+}
+
+
+export { register, login, getRegisteredUser };
