@@ -16,7 +16,9 @@ $(document).ready(function() {
 
     // 🔹 Mostrar la foto de perfil si existe
     if (usuario.imagen) {
-        $('.perfil img').attr('src', usuario.imagen);
+        const $img = $('.perfil img');
+        $img.attr('src', usuario.imagen);
+        $img.attr('alt', `Foto de ${usuario.nombre}`);
     }
 
     // 🔹 Botón de cerrar sesión
