@@ -199,7 +199,7 @@ main > *{
    para que solo se vea uno a la vez. */
 .carrusel-item {
     flex: 0 0 100%;
-    width: 100%;
+    min-width: 100%;
     /* Tus estilos existentes en .packs-contenido se mantienen. */
 }
 
