@@ -26,7 +26,6 @@ $(document).ready(function(){
 
             default:
                 alert('Inicio de sesión exitoso');
-                sessionStorage.setItem('sesionIniciada', 'true');
                 window.location.href  = 'home-usuario.html';
                 break;
         }

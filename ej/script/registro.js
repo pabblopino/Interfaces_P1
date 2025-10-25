@@ -126,10 +126,13 @@ function handleRegister(event) {
                 imagen: imagenBase64 // se guarda en base64
             };
 
-            register(usuario);
-            alert("Registro exitoso. ¡Bienvenido, " + nombre + "!");
-            sessionStorage.setItem('sesionIniciada', 'true');
-            window.location.href = 'home-usuario.html';
+            const registroExitoso = register(usuario);
+            if (registroExitoso) {
+                alert("Registro exitoso. ¡Bienvenido, " + nombre + "!");
+                // Guardar el login activo en la sesión
+                sessionStorage.setItem('sesionIniciada', login);
+                window.location.href = 'home-usuario.html';
+            }
         };
         reader.readAsDataURL(imagen_file);
     }

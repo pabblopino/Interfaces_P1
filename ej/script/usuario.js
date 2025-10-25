@@ -23,9 +23,11 @@ $(document).ready(function() {
 
     // 🔹 Botón de cerrar sesión
     $('.cerrar-sesion').on('click', function() {
-        sessionStorage.removeItem('sesionIniciada');
-        alert('Has cerrado sesión.');
-        window.location.href = 'home.html';
+        if (confirm('¿Desea cerrar sesión?')) {
+            sessionStorage.removeItem('sesionIniciada');
+            alert('Sesión cerrada correctamente.');
+            window.location.href = 'home.html';
+            }
     });
 
     // 🔹 Carrusel
