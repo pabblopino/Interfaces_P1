@@ -1,4 +1,4 @@
-import { register } from '../module/users.mjs';
+import { register } from '../script/users.mjs';
 
 
 // LÓGICA DEL BOTÓN GUARDAR

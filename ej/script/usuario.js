@@ -1,5 +1,5 @@
-import { getRegisteredUser } from '../module/users.mjs';
-import { initCarousel } from '../module/carousel.mjs';
+import { getRegisteredUser } from '../script/users.mjs';
+import { initCarousel } from '../script/carousel.mjs';
 
 $(document).ready(function() {
     const usuario = getRegisteredUser();
